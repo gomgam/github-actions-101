@@ -1,0 +1,16 @@
+name: Test Javascript
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          cd javascript
+          yarn install
+      - name: Test
+        run: |
+          cd javascript
+          yarn test
