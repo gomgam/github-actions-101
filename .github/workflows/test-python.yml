@@ -1,0 +1,16 @@
+name: Test Python
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      # - name: Install dependencies
+      #   run: |
+      #     cd python
+      #     pip install
+      - name: Test
+        run: |
+          cd python
+          python -m unittest
