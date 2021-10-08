@@ -2,7 +2,8 @@ name: Test Python
 on:
   push:
     paths:
-      - python
+      - .github/workflows/test-python.yml
+      - python/**
 jobs:
   test:
     runs-on: ubuntu-latest
